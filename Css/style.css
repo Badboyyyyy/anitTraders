@@ -73,8 +73,8 @@ input[type="text"]{
 .leftCarousel{
    
     position: absolute;
-    left:0;
-    animation: leftAni 3s;
+    left:-50%;
+    animation: leftAni 2s forwards;
     animation-delay:2s;
 }
 .rightCarousel{
@@ -82,8 +82,8 @@ input[type="text"]{
     align-items: center;
     padding:0 60px;
     position: absolute;
-    right:0;
-    animation: rightAni 3s;
+    right:-50%;
+    animation: rightAni 2s forwards;
     animation-delay:2s;
 }
 .display-4{
@@ -157,36 +157,36 @@ input[type="text"]{
   }
   @keyframes leftAni {
       0%{
-          left:10%;
+          left:-50%;
       }
       20%{
-          left:20%
+          left:-30%
       }
       60%{
-          left:30%;
+          left:-20%;
       }
       80%{
-          left:40%
+          left:-10%
       }
       100%{
-          left:50%;
+          left:0%;
       }
   }
   @keyframes rightAni {
     0%{
-        right:10%;
+        right:-50%;
     }
     20%{
-        right:20%
+        right:-30%
     }
     60%{
-        right:30%
+        right:-20%
     }
     80%{
-        right:40%
+        right:-10%
     }
     100%{
-        right:50%;
+        right:0%;
     }
   }
   /* Section Three Start */
