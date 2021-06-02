@@ -1,6 +1,6 @@
 $('.owl-carousel').owlCarousel({
     loop:true,
-    margin:10,
+    margin:70,
     nav:true,
    autoplay:true,
     autoplayTimeout:2000,
@@ -15,9 +15,12 @@ $('.owl-carousel').owlCarousel({
             nav:false
         },
         1000:{
-            items:6,
+            items:5,
             nav:true,
             loop:false
         }
     }
-})
+});
+$("#search").click(function(){
+    $("#searchBar").show(1000);
+});
