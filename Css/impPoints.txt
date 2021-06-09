@@ -1,0 +1,3 @@
+margin auto krne pr sabhi sibling ki margin same ho jaati he
+2-max-width define krne ke baad width 100% krne pr component wrap hokr 1 bachte he aur 50% krne pr wrap hokr 2 bachte he.
+3- Position fixed ka z-index sbse high hota he.
