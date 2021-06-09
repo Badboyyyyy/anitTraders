@@ -382,7 +382,7 @@ nav .navbar-nav li{
     width:100%;
     text-align: center;
     color:#000;
-    background-color:burlywood;
+    background-color: #ea4113;
     font-weight: 700;
     padding:10px 25%;
     outline: 0;
@@ -392,28 +392,28 @@ nav .navbar-nav li{
  .plus{
    display: flex;
    width:10%;;
-   background-color: burlywood;
-   border:1px solid burlywood;
+   background-color: #ea4113;
+   border:1px solid #ea4113;
    color:#fff;
    font-weight: 600;
    font-size: 20px;
  }
  .minus{
    width:10%;
-   background-color: burlywood;
-   border:1px solid burlywood;
+   background-color: #ea4113;
+   border:1px solid #ea4113;
 color:#fff;
 font-weight:600;
   font-size:20px;
  }
  .minus:focus, .plus:focus{
-     border:1px solid burlywood;
+     border:1px solid #ea4113;
      outline:none;
  }
  .num{
    display: flex;
    width: 80%;
-   background-color: burlywood;
+   background-color: #ea4113;;
    border:none;
    outline:none;
    text-align: center;
