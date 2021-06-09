@@ -548,6 +548,10 @@ font-weight:600;
      padding:8px 12px;
      text-align: center;
  }
+ .contentOne{
+     display: flex;
+     width:100%;
+ }
  /* Cart page Css end */
  @media only screen and (max-width:768px){
      .tab{
@@ -571,6 +575,11 @@ font-weight:600;
     align-items: center;
     flex-direction: column;
      }
+     .cart{
+        display: flex;
+        justify-content: flex-start !important;
+        align-items: center;
+    }
      .rightCarousel {
         display: flex;
         align-items: center;
@@ -579,7 +588,8 @@ font-weight:600;
         right: -50%;
         animation: rightAni 2s forwards;
         animation-delay: 1s;
- }}
+ }
+}
  @media only screen and (max-width:480px){
     .rightCarousel {
         display: flex;
@@ -594,4 +604,5 @@ font-weight:600;
         font-size: 22px;
         line-height: 2.3rem;
     }
+    
  }
