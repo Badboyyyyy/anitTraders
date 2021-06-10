@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 @font-face{
     font-family: "Moon2.0";
     src: url("../fonts/header/Moon2.0-Regular.otf") format("opentype");
@@ -22,11 +23,8 @@
    
 }
 
-.act{
-background-color: #fb620f;
-color:#fff;
-font-weight: 700;
-}
+
+
 /* Navbar Css Start */
 nav{
     
@@ -61,6 +59,7 @@ nav .navbar-nav li{
     letter-spacing: 0.03em;
     font-family: "Moon2.0";
 }
+
 .nav .navbar-nav .nav-item .cart{
     position: relative;
 }
@@ -270,7 +269,7 @@ nav .navbar-nav li{
       width: 100%;
      
       left:0;
-      bottom:0;
+      top:110%;
   }
   .social_icons li{
       display: inline-block;
@@ -605,6 +604,13 @@ font-weight:600;
     display: flex;
     justify-content: flex-start;
 }
+.cartContent {
+    display: flex;
+    width: 60%;
+    height: 50vh;
+    flex-direction: column;
+    border: 1px solid #000;
+}
 
 }
  @media only screen and (max-width:480px){
@@ -631,5 +637,19 @@ font-weight:600;
         display: block;
         max-width: 100%;
         height: auto;
+    }
+    .cartContent {
+        display: flex;
+        width: 80%;
+        height: 50vh;
+        flex-direction: column;
+        border: 1px solid #000;
+    }
+    .navbar-brand img {
+        max-width: 100px;
+    }
+    .quick__links li a {
+        color: #989090;
+        font-size: 10px;
     }
  }
