@@ -34,6 +34,12 @@ nav{
     margin:0 0 5px 0;
     font-family: "Moon2.0";
 }
+.navbar-brand img{
+    max-width:200px;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(144, 12, 128, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+  }
 nav::after{
     position: absolute;
     content:'';
@@ -586,7 +592,7 @@ font-weight:600;
      }
      .cart{
         display: flex;
-        justify-content: flex-start !important;
+        justify-content: center;
         align-items: center;
     }
      .leftCarousel {
@@ -607,6 +613,11 @@ font-weight:600;
     max-width: 100%;
     height: auto;
 }
+.nav-link.cart{
+    display: flex;
+    justify-content: flex-start;
+}
+
 }
  @media only screen and (max-width:480px){
     .leftCarousel {
@@ -617,6 +628,15 @@ font-weight:600;
         left: -50%;
         animation: leftAni 2s forwards;
         animation-delay: 1s;
+    }
+    #searchBar input[type="text"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin: 0 20px;
+        width: 220px;
+        width: 230px;
+        outline: 1px solid #fb620f;
+        border: 1px solid #fb620f;
     }
     
     .img-fluid{
