@@ -147,7 +147,7 @@ nav .navbar-nav li{
     content:'';
     top:110%;
    
-   
+    border-radius:10px;
     border:2px solid #ea4113;
     left:0;
 }
