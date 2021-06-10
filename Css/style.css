@@ -119,7 +119,7 @@ nav .navbar-nav li{
 .rightCarousel{
    
     position: absolute;
-    right:-30%;
+    right:-50%;
     animation: rightAni 2s forwards;
     animation-delay:1s;
     display: flex;
@@ -222,7 +222,7 @@ nav .navbar-nav li{
           left:-10%
       }
       100%{
-          left:0%;
+          left:-3%;
       }
   }
   @keyframes rightAni {
@@ -239,7 +239,7 @@ nav .navbar-nav li{
         right:-10%
     }
     100%{
-        right:0%;
+        right:-3%;
     }
   }
   /* Section Three Start */
