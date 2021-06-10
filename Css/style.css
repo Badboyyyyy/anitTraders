@@ -217,7 +217,7 @@ nav .navbar-nav li{
      
      
       100%{
-          left:-3%;
+          left:0%;
       }
   }
   @keyframes rightAni {
@@ -226,7 +226,7 @@ nav .navbar-nav li{
     }
   
     100%{
-        right:-3%;
+        right:0%;
     }
   }
   /* Section Three Start */
