@@ -21,6 +21,7 @@
     padding:8px 20px 8px 20px;
    
 }
+
 /* Navbar Css Start */
 nav{
     
@@ -94,29 +95,32 @@ nav .navbar-nav li{
     width:100%;
     height:50vh;
 }
-
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #000;
+          }
 .carouselContent{
     display: flex;
     width:calc(100% / 2);
     height:100%;
     overflow: hidden;
 }
-.leftCarousel{
+.rightCarousel{
    
     position: absolute;
-    left:-50%;
-    animation: leftAni 2s forwards;
+    right:-50%;
+    animation: rightAni 2s forwards;
     animation-delay:1s;
     display: flex;
     justify-content: center;
 }
-.rightCarousel{
+.leftCarousel{
     display: flex;
     align-items: center;
     padding:0 60px;
     position: absolute;
-    right:-50%;
-    animation: rightAni 2s forwards;
+    left:-50%;
+    animation: leftAni 2s forwards;
     animation-delay:1s;
 }
 .display-4{
@@ -124,7 +128,7 @@ nav .navbar-nav li{
     font-family: "tt0047m_";
 
 }
-.rightCarousel .display-4:after{
+.leftCarousel .display-4:after{
     position: absolute;
     width:90%;
     
@@ -580,29 +584,39 @@ font-weight:600;
         justify-content: flex-start !important;
         align-items: center;
     }
-     .rightCarousel {
+     .leftCarousel {
         display: flex;
         align-items: center;
         padding: 5px 0px;
             position: absolute;
-        right: -50%;
-        animation: rightAni 2s forwards;
+        left: -50%;
+        animation: leftAni 2s forwards;
         animation-delay: 1s;
  }
+ .display-4{
+    font-size: 30px !important;
+    line-height: 2.3rem !important;
+}
+.img-fluid{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
 }
  @media only screen and (max-width:480px){
-    .rightCarousel {
+    .leftCarousel {
         display: flex;
         align-items: center;
         padding: 10px 5px 10px 20px;
         position: absolute;
-        right: -50%;
-        animation: rightAni 2s forwards;
+        left: -50%;
+        animation: leftAni 2s forwards;
         animation-delay: 1s;
     }
-    .display-4{
-        font-size: 22px;
-        line-height: 2.3rem;
-    }
     
+    .img-fluid{
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
  }
