@@ -64,6 +64,13 @@ for(m=0; m < minus.length; m++){
     
     })
 }
+// menu active class added
+$(document).ready(function() {
+    $(".nav-item a").filter(function() {
+        return this.href == location.href.replace(/#.*/,"");
+    }).parent("li").addClass("act");
+})
+
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
