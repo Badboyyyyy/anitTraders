@@ -142,12 +142,13 @@ nav .navbar-nav li{
 }
 .leftCarousel .display-4:after{
     position: absolute;
-    width:90%;
+    width:85%;
     
     content:'';
-    bottom:0;
+    top:110%;
    
-    border:3px solid #ea4113;
+   
+    border:2px solid #ea4113;
     left:0;
 }
 /* Home Page Carousel End */
