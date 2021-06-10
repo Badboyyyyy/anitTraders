@@ -119,7 +119,7 @@ nav .navbar-nav li{
 .rightCarousel{
    
     position: absolute;
-    right:-50%;
+    right:-30%;
     animation: rightAni 2s forwards;
     animation-delay:1s;
     display: flex;
@@ -137,6 +137,7 @@ nav .navbar-nav li{
 .display-4{
     position: relative;
     font-family: "moon2.0";
+   font-size:40px;
 
 }
 .leftCarousel .display-4:after{
@@ -604,7 +605,7 @@ font-weight:600;
         animation: leftAni 2s forwards;
         animation-delay: 1s;
  }
- .display-4{
+ .display-5{
     font-size: 30px !important;
     line-height: 2.3rem !important;
 }
