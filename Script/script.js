@@ -29,6 +29,7 @@ var price = document.getElementsByClassName("btn");
 var plus = document.getElementsByClassName("plus")
 var minus = document.getElementsByClassName("minus");
 var num = document.getElementsByClassName("num");
+
 var j, k, l , m, p;
 var p = 1;
 
@@ -38,6 +39,7 @@ var p = 1;
             this.style.display = "none";
             this.nextElementSibling.style.display = "none";
            this.nextElementSibling.style.display = "flex";
+         
         })
     }
  // Plus button function 
@@ -47,6 +49,8 @@ var p = 1;
          p++;
          console.log(p);
         this.nextElementSibling.value = p;
+        item++;
+        document.getElementsByClassName("item")[0].innerHTML = item;
          
      })
  }
@@ -59,11 +63,13 @@ for(m=0; m < minus.length; m++){
                price[p].style.display = "flex";
            }
           this.parentElement.style.display = "none";
+          
         }
         else{
             p--;
             this.previousElementSibling.value = p;
-           
+            item--;
+            document.getElementsByClassName("item")[0].innerHTML = item;
         }
     
     })
@@ -82,21 +88,22 @@ for(var i = 0; i < addCart.length; i++) {
         document.getElementsByClassName("item")[0].innerHTML = item;
     var currentAddToCartButton = e.target;
     var parentBox = currentAddToCartButton.parentElement;
-   
-    var images = parentBox.getElementsByClassName("imgfluid")[0].src;
+    var val= this.nextElementSibling;
     
-   
-   
-    console.log(images);
+    var images = parentBox.getElementsByClassName("imgfluid")[0].src;
+    var title= parentBox.getElementsByTagName("p")[0].innerText;
+    var weight= parentBox.getElementsByTagName("p")[1].innerText;
+    var rate= parentBox.getElementsByTagName("p")[2].innerText;
+    
     
        
     
-     addnewRowInCart(images);
+     addnewRowInCart(images, title,weight, rate);
     }
     
 }
 var cartContainter = document.getElementsByClassName("cartContainer")[0];
-function addnewRowInCart(images) {
+function addnewRowInCart(images, title, weight, rate) {
  var div = document.createElement("div");
     div.classList.add("row");
     insideDivContent = `
@@ -104,13 +111,25 @@ function addnewRowInCart(images) {
     <img src=${images}>
     </div>
     <div class="col-6">
-    <div class="contentTitle">
    
+    <button class="rmvBtn" >Remove </button>
+    <div class="contentTitle">
+     <h4>${title}</d4>
+     <h5>${weight}</h5>
+     <h5>${rate}</h5>
     </div>
     </div>`;
     div.innerHTML = insideDivContent;
     cartContainter.appendChild(div);
 }
+//remove lement from cart
+var a = document.getElementsByClassName("rmvBtn");
+for(var b = 0; b < a.length; b++) {
+a[b].addEventListener("click", function() {
+console.log("heool");
+}
+)}
+
 
 
 
