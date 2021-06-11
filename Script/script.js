@@ -66,13 +66,48 @@ for(m=0; m < minus.length; m++){
 }
 // menu active class added
 
-$(document).ready(function () {
-    var url = window.location;
-    $('ul a[href="'+ url +'"]').parent().addClass('active');
-    $('ul a').filter(function() {
-         return this.href == url;
-    }).parent().addClass('active');
-});
+// Add to cart Button functionality
+var addCart = document.getElementsByClassName("addTo");
+
+var item = 0;
+for(var i = 0; i < addCart.length; i++) {
+   
+    addCart[i].addEventListener("click", updateCartContent)
+    function updateCartContent(e) {
+        item++;
+        document.getElementsByClassName("item")[0].innerHTML = item;
+    var currentAddToCartButton = e.target;
+    var parent = currentAddToCartButton.parent;
+    var images = document.getElementsByClassName("img_img")[0].src;
+    
+    var title = document.getElementsByClassName("title")[0];
+   
+   
+    
+       
+    
+     addnewRowInCart(images, title);
+    }
+    
+}
+var cartContainter = document.getElementsByClassName("cartContainer")[0];
+function addnewRowInCart(images, title) {
+ var div = document.createElement("div");
+    div.classList.add("row");
+    insideDivContent = `
+    <div class="col-6">
+    <img src=${images}>
+    </div>
+    <div class="col-6">
+    <div class="contentTitle">
+    <h4>${title.innerText} </h4>
+    </div>
+    </div>`;
+    div.innerHTML = insideDivContent;
+    cartContainter.appendChild(div);
+}
+
+
 
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
