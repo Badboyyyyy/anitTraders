@@ -110,35 +110,38 @@ function addnewRowInCart(images, title, weight, rate) {
     <div class="col-6">
     <img src=${images}>
     </div>
-    <div class="col-6 rmv__btn">
+    <div class="col-6">
    
-    <button class="rmvBtn" >Remove </button>
+ 
     <div class="contentTitle">
      <h4>${title}</d4>
      <h5>${weight}</h5>
      <h5>${rate}</h5>
+    
     </div>
-    </div>`;
+    
+    </div>
+    <button class="removeBtn rmvBtn">Remove Button </button>`;
     div.innerHTML = insideDivContent;
     cartContainter.appendChild(div);
-}
-//remove lement from cart
-var a = document.getElementsByClassName("rmvBtn");
-for(var b = 0; b < a.length; b++) {
-a[b].addEventListener("click", function() {
-console.log("heool");
-}
-                      )}
-
-
-$(document).ready(function () {
-    var a = document.getElementsByClassName("rmvBtn");
-    for(var b = 0; b < a.length; b++) {
-    a[b].addEventListener("click", function() {
-    console.log("eho");
+    var removeBtn = document.getElementsByClassName("removeBtn");
+    for(var k = 0; k < removeBtn.length; k++) {
+        removeBtn[k].addEventListener("click", removeItem)
     }
-                          )}
-})
+    function removeItem(e) {
+        e.target.parentElement.remove();
+    }
+}
+
+                    
+/*
+function deleteItem(){
+   
+var ma = document.getElementsByClassName("row");
+ ma[0].style.display = "none";
+
+    }
+    */
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
