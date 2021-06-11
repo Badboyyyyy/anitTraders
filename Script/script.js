@@ -110,7 +110,7 @@ function addnewRowInCart(images, title, weight, rate) {
     <div class="col-6">
     <img src=${images}>
     </div>
-    <div class="col-6">
+    <div class="col-6 rmv__btn">
    
     <button class="rmvBtn" >Remove </button>
     <div class="contentTitle">
@@ -128,11 +128,17 @@ for(var b = 0; b < a.length; b++) {
 a[b].addEventListener("click", function() {
 console.log("heool");
 }
-)}
+                      )}
 
 
-
-
+$(document).ready(function () {
+    var a = document.getElementsByClassName("rmvBtn");
+    for(var b = 0; b < a.length; b++) {
+    a[b].addEventListener("click", function() {
+    console.log("eho");
+    }
+                          )}
+})
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
