@@ -414,29 +414,34 @@ nav .navbar-nav li{
  
  .plus{
    display: flex;
-   width:10%;;
-   background-color: #ea4113;
-   border:1px solid #ea4113;
-   color:#fff;
-   font-weight: 600;
-   font-size: 20px;
+   width:10%;
+  border:none;
+  outline: none;
+   color:#000;
+   background-color: #fff;
+   font-weight: 700;
+   font-weight:600;
+   font-size: 30px;
  }
  .minus{
    width:10%;
-   background-color: #ea4113;
-   border:1px solid #ea4113;
-color:#fff;
+ border:none;
+ outline: none;
+color:#000;
+background-color: #fff;
+font-weight: 700;
 font-weight:600;
-  font-size:20px;
+  font-size:30px;
  }
  .minus:focus, .plus:focus{
-     border:1px solid #ea4113;
+     border:none;
+    
      outline:none;
  }
  .num{
    display: flex;
-   width: 80%;
-   background-color: #ea4113;;
+   width: 50%;
+   background:none;
    border:none;
    outline:none;
    text-align: center;
@@ -444,6 +449,9 @@ font-weight:600;
  }
  .animat{
      display: none;
+     justify-content: center;
+     margin:5px auto;
+   
  }
   /* Change background color of buttons on hover */
   .tab button:hover {
@@ -483,30 +491,21 @@ font-weight:600;
      max-width:250px;
      width:100%;
       margin:10px auto;
-    
+      border:1px solid #363636;
       flex-direction: column;
   }
   .customProducts .customImg{
      display: block;
-      width:80%;
+      width:60%;
      margin:auto;
     
-     border:1px solid #363636;
+    
     overflow: hidden;
   }
   .customProducts .customImg img{
       width: 100%;
   }
-  .customProducts p{
-      display: block;
-      width:80%;
-      padding:7px 0;
-      margin:10px auto;
-      background-color:#101447;
-      color:#fff;
-      font-weight: 600;
-      text-align:center
-  }
+  
 .customProducts .addToCart{
     display: flex;
     background-color: #0fae0f;
@@ -516,6 +515,19 @@ font-weight:600;
     padding:7px 0;
     text-align: center;
     font-weight: 600;
+}
+.customProducts .btn{
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    outline:none;
+    border:none;
+    margin:5px auto;
+}
+.customProducts p{
+    display: flex;
+    padding:0 10px;
+    margin:5px 0;
 }
 .customProducts .addToCart button{
     margin: 0 0.5em;

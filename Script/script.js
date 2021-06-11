@@ -29,13 +29,14 @@ var price = document.getElementsByClassName("btn");
 var plus = document.getElementsByClassName("plus")
 var minus = document.getElementsByClassName("minus");
 var num = document.getElementsByClassName("num");
-var j, k, l , m;
+var j, k, l , m, p;
 var p = 1;
 
 
     for(j=0; j < price.length; j++){
         price[j].addEventListener("click", function() {
             this.style.display = "none";
+            this.nextElementSibling.style.display = "none";
            this.nextElementSibling.style.display = "flex";
         })
     }
@@ -54,7 +55,10 @@ var p = 1;
 for(m=0; m < minus.length; m++){
     minus[m].addEventListener("click", function() {
         if(p <= 0){
-            alert("value should be atleast 1");
+           for(p = 0; p < price.length; p++){
+               price[p].style.display = "flex";
+           }
+          this.parentElement.style.display = "none";
         }
         else{
             p--;
@@ -77,21 +81,22 @@ for(var i = 0; i < addCart.length; i++) {
         item++;
         document.getElementsByClassName("item")[0].innerHTML = item;
     var currentAddToCartButton = e.target;
-    var parent = currentAddToCartButton.parent;
-    var images = document.getElementsByClassName("img_img")[0].src;
+    var parentBox = currentAddToCartButton.parentElement;
+   
+    var images = parentBox.getElementsByClassName("imgfluid")[0].src;
     
-    var title = document.getElementsByClassName("title")[0];
    
    
+    console.log(images);
     
        
     
-     addnewRowInCart(images, title);
+     addnewRowInCart(images);
     }
     
 }
 var cartContainter = document.getElementsByClassName("cartContainer")[0];
-function addnewRowInCart(images, title) {
+function addnewRowInCart(images) {
  var div = document.createElement("div");
     div.classList.add("row");
     insideDivContent = `
@@ -100,7 +105,7 @@ function addnewRowInCart(images, title) {
     </div>
     <div class="col-6">
     <div class="contentTitle">
-    <h4>${title.innerText} </h4>
+   
     </div>
     </div>`;
     div.innerHTML = insideDivContent;
