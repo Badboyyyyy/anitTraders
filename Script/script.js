@@ -86,7 +86,7 @@ for(m=0; m < minus.length; m++){
 // Add to cart Button functionality
 var addCart = document.getElementsByClassName("addTo");
 
-var item = 0;
+var item = 1;
 for(var i = 0; i < addCart.length; i++) {
    
     addCart[i].addEventListener("click", updateCartContent)
