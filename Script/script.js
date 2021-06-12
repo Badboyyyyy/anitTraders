@@ -30,12 +30,13 @@ var plus = document.getElementsByClassName("plus")
 var minus = document.getElementsByClassName("minus");
 var num = document.getElementsByClassName("num");
 
-var j, k, l , m, p;
-var p = 0;
 
 
-    for(j=0; j < price.length; j++){
+
+// Add to cart button click function
+    for(let j=0; j < price.length; j++){
         price[j].addEventListener("click", function() {
+           
             this.style.display = "none";
             this.nextElementSibling.style.display = "none";
            this.nextElementSibling.style.display = "flex";
@@ -44,18 +45,18 @@ var p = 0;
     }
  
  
-// menu active class added
 
 // Add to cart Button functionality
 var addCart = document.getElementsByClassName("addTo");
 
 var item = 0;
 
-for(var i = 0; i < addCart.length; i++) {
+for(let i = 0; i < addCart.length; i++) {
    
     addCart[i].addEventListener("click", updateCartContent)
     function updateCartContent(e) {
       item++;
+      
         document.getElementsByClassName("item")[0].innerHTML = item;
     var currentAddToCartButton = e.target;
     var parentBox = currentAddToCartButton.parentElement;
@@ -64,18 +65,15 @@ for(var i = 0; i < addCart.length; i++) {
     var images = parentBox.getElementsByClassName("imgfluid")[0].src;
     var title= parentBox.getElementsByTagName("p")[0].innerText;
     var weight= parentBox.getElementsByTagName("p")[1].innerText;
-    var rate= parentBox.getElementsByTagName("p")[2].innerText;
-    
-    
-       
-    
+    var rate= parentBox.getElementsByTagName("p")[2].innerText;   
      addnewRowInCart(images, title,weight, rate);
     }
-    
 }
+
+// Card creating functionality
 var cartContainter = document.getElementsByClassName("cartContainer")[0];
 function addnewRowInCart(images, title, weight, rate) {
- var div = document.createElement("div");
+ let div = document.createElement("div");
     div.classList.add("row");
     insideDivContent = `
     <div class="col-6">
@@ -96,7 +94,7 @@ function addnewRowInCart(images, title, weight, rate) {
     div.innerHTML = insideDivContent;
     cartContainter.appendChild(div);
     var removeBtn = document.getElementsByClassName("removeBtn");
-    for(var k = 0; k < removeBtn.length; k++) {
+    for(let k = 0; k < removeBtn.length; k++) {
         removeBtn[k].addEventListener("click", removeItem)
     }
     function removeItem(e) {
@@ -105,30 +103,33 @@ function addnewRowInCart(images, title, weight, rate) {
     }
 }
 // Plus button function 
-for(k=0; k < plus.length ; k++){
+
+for( let k=0; k < plus.length ; k++){
+    let p =0; 
     plus[k].addEventListener("click", function(){
-        
-        p++;
-      
-       this.nextElementSibling.value = p;
-      
-        
+      let a = ++p;
+       this.nextElementSibling.value = a;
     })
 }
 
 // minus button function
-for(m=0; m < minus.length; m++){
-   minus[m].addEventListener("click", function() {
+for(let m=0; m < minus.length; m++){
+  
+   minus[m].addEventListener("click", function(e) {
+     let p=  e.target.previousElementSibling.value;
        if(p < 1){
-          for(var q = 0; q < price.length; q++){
+          for(let q = 0; q < price.length; q++){
               price[q].style.display = "flex";
           }
-        
+          item--;
+          document.getElementsByClassName("item")[0].innerHTML = item;
          this.parentElement.style.display = "none"; 
        }
+      
        else{
-           p--;
-           this.previousElementSibling.value = p;       
+          let b= --p;
+           this.previousElementSibling.value = b;   
+              
        }
    
    })
