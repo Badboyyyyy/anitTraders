@@ -49,7 +49,7 @@ var p = 1;
          p++;
        
         this.nextElementSibling.value = p;
-        item++;
+        var pclick= item++;
         document.getElementsByClassName("item")[0].innerHTML = item;
          
      })
@@ -67,9 +67,9 @@ for(m=0; m < minus.length; m++){
         }
         else{
             p--;
-            var mclick =+1;
+           
             this.previousElementSibling.value = p;
-            item--;
+           var mclick = item--;
             document.getElementsByClassName("item")[0].innerHTML = item;
         }
     
@@ -132,7 +132,8 @@ function addnewRowInCart(images, title, weight, rate) {
     }
     function removeItem(e) {
         e.target.parentElement.remove();
-        document.getElementsByClassName("item")[0].innerHTML = item--;
+        item = pclick -mclick;
+        document.getElementsByClassName("item")[0].innerHTML = item;
     }
 }
 

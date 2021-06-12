@@ -736,6 +736,7 @@ sup{
     .img-fluid {
         display: block;
         max-width: 100%;
+        margin:auto;
         max-height: 70%;
     }
  }
