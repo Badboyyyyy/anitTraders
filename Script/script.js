@@ -61,21 +61,22 @@ var p = 1;
 for(m=0; m < minus.length; m++){
     minus[m].addEventListener("click", function() {
         
-        if(p < 1){
-           for(p = 0; p < price.length; p++){
-               price[p].style.display = "flex";
-           }
-          this.parentElement.style.display = "none";
-          
-        }
-        else{
-           
-          
+        if(p > 0 && p < 20){
             p--;
             
             this.previousElementSibling.value = p;
             item--;
             document.getElementsByClassName("item")[0].innerHTML = item;
+          
+          
+        }
+        else{
+           
+          
+            for(p = 0; p < price.length; p++){
+                price[p].style.display = "flex";
+            }
+           this.parentElement.style.display = "none";
         }
     
     })
