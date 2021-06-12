@@ -42,55 +42,25 @@ var p = 1;
          
         })
     }
- // Plus button function 
- for(k=0; k < plus.length ; k++){
-     plus[k].addEventListener("click", function(){
-         
-         p++;
-       
-        this.nextElementSibling.value = p;
-        var pclick= item++;
-        document.getElementsByClassName("item")[0].innerHTML = item;
-         
-     })
- }
  
-// minus button function
-for(m=0; m < minus.length; m++){
-    minus[m].addEventListener("click", function() {
-        if(p <= 0){
-           for(var q = 0; q < price.length; q++){
-               price[q].style.display = "flex";
-           }
-          this.parentElement.style.display = "none";
-          
-        }
-        else{
-            p--;
-           
-            this.previousElementSibling.value = p;
-           var mclick = item--;
-            document.getElementsByClassName("item")[0].innerHTML = item;
-        }
-    
-    })
-}
-
+ 
 // menu active class added
 
 // Add to cart Button functionality
 var addCart = document.getElementsByClassName("addTo");
 
 var item = 0;
+
 for(var i = 0; i < addCart.length; i++) {
    
     addCart[i].addEventListener("click", updateCartContent)
     function updateCartContent(e) {
         item++;
+       
         document.getElementsByClassName("item")[0].innerHTML = item;
     var currentAddToCartButton = e.target;
     var parentBox = currentAddToCartButton.parentElement;
-    var val= this.nextElementSibling;
+   // var val= this.nextElementSibling;
     
     var images = parentBox.getElementsByClassName("imgfluid")[0].src;
     var title= parentBox.getElementsByTagName("p")[0].innerText;
@@ -132,12 +102,44 @@ function addnewRowInCart(images, title, weight, rate) {
     }
     function removeItem(e) {
         e.target.parentElement.remove();
-        item = pclick -mclick;
-        document.getElementsByClassName("item")[0].innerHTML = item;
+        document.getElementsByClassName("item")[0].innerHTML = item--;
     }
 }
+// Plus button function 
+for(k=0; k < plus.length ; k++){
+    plus[k].addEventListener("click", function(){
+        
+        p++;
+      
+       this.nextElementSibling.value = p;
+       item++;
+       document.getElementsByClassName("item")[0].innerHTML = item;
+        
+    })
+}
 
-                    
+// minus button function
+for(m=0; m < minus.length; m++){
+   minus[m].addEventListener("click", function() {
+       if(p <= 0){
+          for(var q = 0; q < price.length; q++){
+              price[q].style.display = "flex";
+          }
+         this.parentElement.style.display = "none";
+         this.nextElementSibling.value = p++;
+         
+       }
+       else{
+           p--;
+           var mclick =+1;
+           this.previousElementSibling.value = p;
+           item--;
+           document.getElementsByClassName("item")[0].innerHTML = item;
+       }
+   
+   })
+}
+               
 /*
 function deleteItem(){
    
