@@ -615,8 +615,25 @@ font-weight:600;
      border:none;
      outline: none;
  }
+ .contentOne{
+    background-image: url('../images/banner/banner4.jpg');
+    height: 390px; 
+    background-size: 100% 100%;
+ }
+ @media only screen and (max-width:991){
+    .sameDay ul li {
+        color: #ffffff;
+        display: inline-flex;
+        font-size: 15px;
+    }
+ }
  /* Cart page Css end */
  @media only screen and (max-width:768px){
+    .contentOne{
+        background-image: url('../images/banner/banner4.jpg');
+        height: 180px; 
+        background-size: 100% 100%;
+     }
      .tab{
          width: flex;
          width:40%;
@@ -681,6 +698,11 @@ sup{
 
 }
  @media only screen and (max-width:480px){
+    .contentOne{
+        background-image: url('../images/banner/banner4.jpg');
+        height: 180px; 
+        background-size: 100% 100%;
+     }
     .leftCarousel {
         display: none;
        
@@ -739,4 +761,11 @@ sup{
         margin:auto;
         max-height: 70%;
     }
+ }
+ @media only screen and (max-width:320px){
+    .contentOne{
+        background-image: url('../images/banner/banner4.jpg');
+        height: 135px; 
+        background-size: 100% 100%;
+     }
  }
