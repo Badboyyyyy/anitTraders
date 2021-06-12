@@ -47,7 +47,7 @@ var p = 1;
      plus[k].addEventListener("click", function(){
          
          p++;
-        var click = p++;
+       
         this.nextElementSibling.value = p;
         item++;
         document.getElementsByClassName("item")[0].innerHTML = item;
