@@ -21,6 +21,7 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
+
 // Buy Now Button function
 $("#search").click(function(){
     $("#searchBar").show(1000);
@@ -51,6 +52,7 @@ var p = 1;
         this.nextElementSibling.value = p;
         item++;
         document.getElementsByClassName("item")[0].innerHTML = item;
+       var  check = item;
          
      })
  }
@@ -66,7 +68,10 @@ for(m=0; m < minus.length; m++){
           
         }
         else{
+           
+          
             p--;
+          
             this.previousElementSibling.value = p;
             item--;
             document.getElementsByClassName("item")[0].innerHTML = item;
@@ -130,6 +135,9 @@ function addnewRowInCart(images, title, weight, rate) {
     }
     function removeItem(e) {
         e.target.parentElement.remove();
+     
+       
+        document.getElementsByClassName("item")[0].innerHTML = item--;
     }
 }
 

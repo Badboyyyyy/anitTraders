@@ -678,17 +678,31 @@ sup{
     left: 18.5em;
     font-size: 20px;
 }
+
 }
  @media only screen and (max-width:480px){
     .leftCarousel {
-        display: flex;
-        align-items: center;
-        padding: 10px 5px 10px 20px;
-        position: absolute;
-        left: -50%;
-        animation: leftAni 2s forwards;
-        animation-delay: 1s;
+        display: none;
+       
     }
+    .rightCarousel{
+   
+    position: absolute;
+    right:-100%;
+    animation: rightAni 1s forwards;
+    animation-delay:1s;
+    display: flex;
+    justify-content: center;
+}
+@keyframes rightAni {
+    0%{
+        right:-100%;
+    }
+  
+    100%{
+        right:-3%;
+    }
+  }
     #searchBar input[type="text"] {
         padding: 10px;
         border: 1px solid #ccc;
