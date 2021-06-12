@@ -61,7 +61,7 @@ var p = 1;
 for(m=0; m < minus.length; m++){
     minus[m].addEventListener("click", function() {
         
-        if(p > 0 && p < 20){
+        if(p > 1 && p < 20){
             p--;
             
             this.previousElementSibling.value = p;
@@ -91,8 +91,8 @@ for(var i = 0; i < addCart.length; i++) {
    
     addCart[i].addEventListener("click", updateCartContent)
     function updateCartContent(e) {
-        item++;
-        document.getElementsByClassName("item")[0].innerHTML = item;
+        //item++;
+        //document.getElementsByClassName("item")[0].innerHTML = item;
     var currentAddToCartButton = e.target;
     var parentBox = currentAddToCartButton.parentElement;
     var val= this.nextElementSibling;
