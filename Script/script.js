@@ -21,7 +21,7 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
-
+var pp =0; mm=0;
 // Buy Now Button function
 $("#search").click(function(){
     $("#searchBar").show(1000);
@@ -46,7 +46,7 @@ var p = 1;
  // Plus button function 
  for(k=0; k < plus.length ; k++){
      plus[k].addEventListener("click", function(){
-         
+         pp++;
          p++;
          console.log(p);
         this.nextElementSibling.value = p;
@@ -60,7 +60,8 @@ var p = 1;
 // minus button function
 for(m=0; m < minus.length; m++){
     minus[m].addEventListener("click", function() {
-        if(p <= 0){
+        
+        if(p < 1){
            for(p = 0; p < price.length; p++){
                price[p].style.display = "flex";
            }
@@ -71,7 +72,7 @@ for(m=0; m < minus.length; m++){
            
           
             p--;
-          
+            
             this.previousElementSibling.value = p;
             item--;
             document.getElementsByClassName("item")[0].innerHTML = item;
