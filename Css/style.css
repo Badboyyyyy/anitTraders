@@ -686,13 +686,14 @@ sup{
        
     }
     .rightCarousel{
-   
-    position: absolute;
-    right:-100%;
-    animation: rightAni 1s forwards;
+   position: absolute;
+   right:0%;
+        width: 100%;
+        justify-content: center;
+    animation:none;
     animation-delay:1s;
     display: flex;
-    justify-content: center;
+   
 }
 @keyframes rightAni {
     0%{
@@ -700,7 +701,7 @@ sup{
     }
   
     100%{
-        right:-3%;
+        right:0%;
     }
   }
     #searchBar input[type="text"] {
