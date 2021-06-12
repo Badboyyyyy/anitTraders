@@ -31,7 +31,7 @@ var minus = document.getElementsByClassName("minus");
 var num = document.getElementsByClassName("num");
 
 var j, k, l , m, p;
-var p = 1;
+var p = 0;
 
 
     for(j=0; j < price.length; j++){
@@ -55,8 +55,7 @@ for(var i = 0; i < addCart.length; i++) {
    
     addCart[i].addEventListener("click", updateCartContent)
     function updateCartContent(e) {
-        item++;
-       
+      item++;
         document.getElementsByClassName("item")[0].innerHTML = item;
     var currentAddToCartButton = e.target;
     var parentBox = currentAddToCartButton.parentElement;
@@ -112,8 +111,7 @@ for(k=0; k < plus.length ; k++){
         p++;
       
        this.nextElementSibling.value = p;
-       item++;
-       document.getElementsByClassName("item")[0].innerHTML = item;
+      
         
     })
 }
@@ -121,20 +119,16 @@ for(k=0; k < plus.length ; k++){
 // minus button function
 for(m=0; m < minus.length; m++){
    minus[m].addEventListener("click", function() {
-       if(p <= 0){
+       if(p < 1){
           for(var q = 0; q < price.length; q++){
               price[q].style.display = "flex";
           }
-         this.parentElement.style.display = "none";
-         this.nextElementSibling.value = p++;
-         
+        
+         this.parentElement.style.display = "none"; 
        }
        else{
            p--;
-           var mclick =+1;
-           this.previousElementSibling.value = p;
-           item--;
-           document.getElementsByClassName("item")[0].innerHTML = item;
+           this.previousElementSibling.value = p;       
        }
    
    })
